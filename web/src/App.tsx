@@ -4,12 +4,8 @@ import { Landing } from './pages/Landing';
 
 import './assets/styles/global.css';
 
-function App(): JSX.Element {
-  return (
-    <div className="App">
-      <Landing />
-    </div>
-  );
+function App() {
+  return <Landing />;
 }
 
 export default App;
