@@ -10,7 +10,7 @@ export const Routes: React.FC = () => {
     <BrowserRouter>
       <Route path="/" exact component={Landing} />
       <Route path="/study" component={TeacherList} />
-      <Route path="/give-class" component={TeacherForm} />
+      <Route path="/give-classes" component={TeacherForm} />
     </BrowserRouter>
   );
 };
