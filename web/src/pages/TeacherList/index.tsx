@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { images } from '../../assets/images';
 import { icons } from '../../assets/images/icons';
 
+import './styles.css';
+
 export const TeacherList: React.FC = () => {
   return (
     <div id="page-teacher-list" className="container">
