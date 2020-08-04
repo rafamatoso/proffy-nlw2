@@ -8,9 +8,9 @@ import { TeacherForm } from '../pages/TeacherForm';
 export const Routes: React.FC = () => {
   return (
     <BrowserRouter>
-      <Route path="/" component={Landing} />
-      <Route path="/study" component={TeacherList} exact />
-      <Route path="/give-class" component={TeacherForm} exact />
+      <Route path="/" exact component={Landing} />
+      <Route path="/study" component={TeacherList} />
+      <Route path="/give-class" component={TeacherForm} />
     </BrowserRouter>
   );
 };
