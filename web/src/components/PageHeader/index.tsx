@@ -1,8 +1,10 @@
-import React, { Props } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { images } from '../../assets/images';
 import { icons } from '../../assets/images/icons';
+
+import './styles.css';
 
 interface PageHeaderProps {
   title: string;
@@ -14,7 +16,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   children,
 }: PageHeaderProps) => {
   return (
-    <header className="page-header">
+    <header id="page-header" className="page-header">
       <div className="top-bar-container">
         <Link to="/">
           <img src={icons.back} alt="Voltar" />
