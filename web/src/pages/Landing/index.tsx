@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { images } from '../../assets/images';
 import { icons } from '../../assets/images/icons';
 
 import './styles.css';
+import axios from '../../services/api';
 
 export const Landing: React.FC = () => {
+  const [totalConnections, setTotalConnections] = useState(0);
+
+  useEffect(() => {
+    axios.get('connections').then((res) => {
+      const { total } = res.data;
+      setTotalConnections(total);
+    });
+  }, []);
+
   return (
     <div id="page-landing">
       <div id="page-landing-content" className="container">
@@ -33,7 +43,7 @@ export const Landing: React.FC = () => {
           </Link>
         </div>
         <span className="total-connections">
-          Total de 200 conexões já realizadas{' '}
+          Total de {totalConnections} conexões já realizadas{' '}
           <img src={icons.purpleHeart} alt="Coração roxo" />
         </span>
       </div>
