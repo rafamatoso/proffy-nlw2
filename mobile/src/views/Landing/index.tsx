@@ -16,6 +16,10 @@ export const Landing: React.FC = () => {
     navigate('GiveClasses');
   };
 
+  const handleNavigateToStudyView = () => {
+    navigate('Study');
+  };
+
   return (
     <View style={styles.container}>
       <Image source={landingImg} style={styles.banner} />
@@ -25,7 +29,9 @@ export const Landing: React.FC = () => {
       </Text>
 
       <View style={styles.buttonsContainer}>
-        <RectButton style={[styles.button, styles.buttonPrimary]}>
+        <RectButton
+          style={[styles.button, styles.buttonPrimary]}
+          onPress={handleNavigateToStudyView}>
           <Image source={studyIcon} />
 
           <Text style={styles.buttonText}>Estudar</Text>
