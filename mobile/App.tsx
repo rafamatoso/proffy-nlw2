@@ -4,7 +4,7 @@ import { AppLoading } from 'expo';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
-import { Landing } from './src/views/Landing';
+import AppStack from './src/routes/AppStack';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,7 +19,7 @@ export default function App() {
   } else {
     return (
       <>
-        <Landing />
+        <AppStack />
         <StatusBar style="light" />
       </>
     );
