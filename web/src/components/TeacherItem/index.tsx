@@ -1,39 +1,55 @@
 import React from 'react';
 
+import api from '../../services/api';
+
 import { icons } from '../../assets/images/icons';
 
 import './styles.css';
 
-export const TeacherItem: React.FC = () => {
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+}
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+export const TeacherItem: React.FC<TeacherItemProps> = ({
+  teacher: { id, avatar, bio, cost, name, subject, whatsapp },
+}: TeacherItemProps) => {
+  const createNewConnection = (): void => {
+    api.post('connections', { user_id: id });
+  };
   return (
     <article className="teacher-item">
       <header>
-        <img
-          src="https://avatars0.githubusercontent.com/u/42968708?s=400&u=59b20b360a2ea19b723297a8cf2f0e77c267cf3e&v=4"
-          alt="Rafael Matoso"
-        />
+        <img src={avatar} alt={name} />
         <div>
-          <strong>Rafael Matoso</strong>
-          <span>Física</span>
+          <strong>{name}</strong>
+          <span>{subject}</span>
         </div>
       </header>
 
-      <p>
-        O melhor físico depois de Einstein.
-        <br />
-        <br />
-        Einstein teria orgulho dos meus feitios, não estou brincando
-      </p>
+      <p>{bio}</p>
 
       <footer>
         <p>
           Preço/hora
-          <strong>R$ 100,00</strong>
+          <strong>R$ {cost}</strong>
         </p>
-        <button type="button">
+        <a
+          target="_blank"
+          href={`https://wa.me/${whatsapp}`}
+          onClick={() => createNewConnection()}
+        >
           <img src={icons.whatsapp} alt="Whatsapp" />
           Entrar em contato
-        </button>
+        </a>
       </footer>
     </article>
   );

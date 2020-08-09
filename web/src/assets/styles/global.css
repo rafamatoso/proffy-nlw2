@@ -14,9 +14,11 @@
   --color-text-title: #32264d;
   --color-text-complement: #9c98a6;
   --color-text-base: #6a6180;
+  --color-text-alt: #585269;
   --color-line-in-white: #e6e6f0;
   --color-input-background: #f8f8fc;
   --color-button-text: #ffffff;
+  --color-button-disabled: #a1a1a1;
   --color-box-base: #ffffff;
   --color-box-footer: #fafafc;
 }
@@ -46,9 +48,10 @@ body {
 body,
 input,
 button,
-textarea {
+textarea,
+select {
   font: 500 1.6rem Poppins;
-  color: var(--color-text-base);
+  color: var(--color-text-alt);
 }
 
 .container {
