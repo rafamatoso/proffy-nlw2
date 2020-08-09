@@ -1,10 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+
+import { styles } from './styles';
 
 export const Favorites = () => {
-  return (
-    <View>
-      <Text />
-    </View>
-  );
+  return <View style={styles.container} />;
 };
