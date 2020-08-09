@@ -1,12 +1,17 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View, Image, Text } from 'react-native';
 
-const Landing: React.FC = () => {
+import landingImg from '../../assets/images/landing.png';
+import { styles } from './styles';
+
+export const Landing: React.FC = () => {
   return (
-    <View>
-      <Text />
+    <View style={styles.container}>
+      <Image source={landingImg} style={styles.banner} />
+      <Text style={styles.title}>
+        Seja bem-vindo, {'\n'}
+        <Text style={styles.titleBold}>O que deseja fazer?</Text>
+      </Text>
     </View>
   );
 };
-
-export default Landing;
