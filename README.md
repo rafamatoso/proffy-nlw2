@@ -10,4 +10,14 @@
 <img alt="Top Used Language" src="https://img.shields.io/github/languages/top/rafamatoso/proffy-nlw2?color=7259c1">
 </p>
 
-<p align="center">Desenvolvimento da aplicação <b>Proffy</b>, criada pela <b><a href="https://rocketseat.com.br/" target="blank">Rocketseat</a></b>.
+<p align="center">Desenvolvimento da aplicação <b>Proffy</b> criada pela <b><a href="https://rocketseat.com.br/" target="blank">Rocketseat</a></b>, com a stack React, React Native e Node.
+
+---
+
+The project was divided into:
+
+- [Web Application](https://github.com/rafamatoso/proffy-nlw2/tree/master/web)
+- [Mobile Application](https://github.com/rafamatoso/proffy-nlw2/tree/master/mobile)
+- [Server](https://github.com/rafamatoso/proffy-nlw2/tree/master/server)
+
+---
